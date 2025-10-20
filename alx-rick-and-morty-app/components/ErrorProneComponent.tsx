@@ -1,8 +1,12 @@
-// components/ErrorProneComponent.tsx
-import React from "react";
+import ErrorBoundary from '@/components/ErrorBoundary';
+import ErrorProneComponent from '@/components/ErrorProneComponent';
 
-const ErrorProneComponent: React.FC = () => {
-  throw new Error("This is a test error!");
+const Home: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <ErrorProneComponent />
+    </ErrorBoundary>
+  );
 };
 
-export default ErrorProneComponent;
+export default Home;
